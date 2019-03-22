@@ -2,7 +2,9 @@ package application;
 
 import java.util.Scanner;
 
-import boardgame.Position;
+
+import chess.ChessMatch;
+import chess.ChessPiece;
 
 public class Program {
 
@@ -10,10 +12,11 @@ public class Program {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
-		Position pos = new Position(3, 5);
-		System.out.println(pos); 
+		ChessMatch chessMatch = new ChessMatch();
+		UI.printBoard(chessMatch.getPieces());		
 		
-		sc.close();
+		
+	sc.close();
 
 	}
 
