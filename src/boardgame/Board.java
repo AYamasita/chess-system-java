@@ -65,7 +65,7 @@ public class Board {
 	
 	public boolean positionExists(Position position)
 	{
-		return positionExists(getRows(),getColumns());
+		return positionExists( position.getRow(),position.getColumn());
 	}
 	
 	private boolean positionExists(int row, int column)
@@ -75,6 +75,11 @@ public class Board {
 	
 	public boolean isThereAPiece(Position position)
 	{
+		if(!positionExists(position))
+		{
+			throw new BoardException("Position is not on the board.");
+		}
+		
 		return piece(position) != null;
 	}
 
