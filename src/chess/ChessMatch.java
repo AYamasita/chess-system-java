@@ -40,6 +40,7 @@ public class ChessMatch {
 		Position target = targetPosition.toPosition();
 		
 		validateSourcePosition(source);
+		validateTargetPosition(source,target);
 		
 		Piece capturedPiece = makeMove(source,target); //realiza o movimento da peça
 		//downcasting Piece to ChessPiece
@@ -66,6 +67,16 @@ public class ChessMatch {
 			throw new ChessException("There is not possible moves for the chosen piece.");
 		}
 	}
+	
+	private void validateTargetPosition(Position source, Position target)
+	{
+		if (!board.piece(source).possibleMovie(target))
+		{
+			throw new ChessException("The choosed piece can not move to choosed position.");
+		}
+	}
+	
+	
 	
 	
 	private void placeNewPiece(char column, int row, ChessPiece piece)
