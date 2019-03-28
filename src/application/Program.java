@@ -44,16 +44,17 @@ public class Program {
 					captured.add(capturedPiece);
 				}
 				
-			} catch (ChessException e) {
+			}
+			catch (ChessException e) {
 				// TODO: handle exception
 				System.out.println(e.getMessage());
-				sc.hasNextLine();				
+				sc.nextLine();				
 			}
 			
 			catch (InputMismatchException e) {
 				// TODO: handle exception
 				System.out.println(e.getMessage());
-				sc.hasNextLine();				
+				sc.nextLine();				
 			}
 
 		}

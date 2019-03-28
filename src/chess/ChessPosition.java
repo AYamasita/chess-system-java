@@ -34,7 +34,7 @@ public class ChessPosition {
 	// no xadrez.. primeiro é a coluna depois a linha.
 	protected static ChessPosition FromPosition(Position position)
 	{
-		return new ChessPosition((char)('a'- position.getColumn()), 8 - position.getRow());
+		return new ChessPosition((char)('a'+ position.getColumn()), 8 - position.getRow());
 	}
 	
 	@Override

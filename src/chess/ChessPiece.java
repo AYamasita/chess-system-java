@@ -18,6 +18,11 @@ public abstract class ChessPiece extends Piece{
 		this.color = color;
 	}
 	
+	public ChessPosition getChessPosition()
+	{
+		return ChessPosition.FromPosition(position);
+	}
+	
 	protected boolean isThereOpponentPiece(Position position)
 	{
 		//downcasting de Piece -> ChessPiece
